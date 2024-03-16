@@ -1,0 +1,138 @@
+/* General Styles */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0; /* Make the skip link visible when focused for better accessibility */
+}
+
+/* Navbar Centering for Mobile Devices */
+#navbarNavDropdown {
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    #navbarNavDropdown {
+        justify-content: flex-start; /* Navbar items aligned to start on larger screens */
+    }
+}
+
+/* Project Entries and Blog Post Styles */
+.project-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-entry {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.project-title {
+    color: #007bff;
+    font-size: 1.5em;
+}
+
+.project-date {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.project-image {
+    max-width: 30%;
+    height: auto;
+    margin: 10px 0;
+}
+
+.project-description {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.read-more {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Carousel Styles */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 35px;
+    width: 35px;
+    background-size: cover;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-indicators li {
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* Focus Styles for Accessibility */
+a:focus, button:focus {
+    outline: 3px solid #0056b3;
+    background-color: rgba(0, 86, 179, 0.1);
+    color: #0056b3;
+    outline-offset: 2px;
+}
+
+/* Custom CSS */
+.container.my-5 {
+    max-width: 90%; /* Container width for better readability on large screens */
+}
+
+/* Sr-only Class for Screen Readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.profile-image {
+    border-radius: 50%; /* Creates a circular frame */
+    object-fit: cover; /* Ensures the image is not distorted */
+    max-width: 300px; /* Maximum width of the image */
+    max-height: 300px; /* Maximum height to maintain the aspect ratio */
+    border: 5px solid #fff; /* Optional: Adds a white border around the image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+    display: block; /* Ensures the image is block-level for margin auto to work */
+    margin: 20px auto; /* Adds margin on top/bottom and auto on the sides for centering */
+}
+
+@media (max-width: 768px) {
+    .profile-image {
+        max-width: 75%; /* Adjusts the size for smaller screens */
+        max-height: 75%; /* Maintain aspect ratio */
+        margin: 10px auto; /* Adjusts the margin for smaller screens */
+    }
+}

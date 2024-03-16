@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devon, The Developer</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min(solar).css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>  
+    <!-- Custom JS -->
+    <script src="js/customScript.js"></script>
+</head>
+<body class="divMain">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="img/dtd-logo.png" alt="Devon's Logo" style="height: 50px; width: auto; margin-right: 10px;"> Web Consultation </a>
+                <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown"> <!-- Updated this line -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Project Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="consultation.html">Consultation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>    
+    <div class="d-flex col-12 justify-content-center align-items-center vh-100 ">
+      <main class="card container my-5">
+        <div class="text-center">
+          <div>
+            <h2>Schedule a Consultation</h2>
+          </div>
+            <div>
+              <p>Ready to take your project to the next level? Let's talk.</p>
+              <button id="loadCalendly" class="btn btn-primary">Book Your Consultation</button>
+            </div>
+         </div>
+         <div id="calendly-container" style=" min-width:320px; height:800px; display:none;"></div>
+      </main>
+    </div>
+    <footer class="text-center py-4">
+      <p>&copy; 2024 Devon, The Developer. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script>
+      document.getElementById('loadCalendly').onclick = function() {
+          var container = document.getElementById('calendly-container');
+          container.style.display = 'block';
+          var script = document.createElement('script');
+          script.src = "https://assets.calendly.com/assets/external/widget.js";
+          document.body.appendChild(script);
+          script.onload = function() {
+              Calendly.initInlineWidget({
+                  url: 'https://calendly.com/dev-devon/30min?background_color=b58900&text_color=eee8d5&primary_color=002b36',
+                  parentElement: document.getElementById('calendly-container'),
+                  prefill: {},
+                  utm: {}
+              });
+          };
+          this.style.display = 'none'; // Hide the button after loading Calendly
+      };
+  </script>
+</body>
+</html>
+
+                
