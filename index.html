@@ -1,97 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devon, The Developer</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min(solar).css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-    <!-- Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>  
-    <!-- Custom JS -->
-    <script src="js/customScript.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Devon, The Developer</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Portfolio of Devon, a full-stack developer and software engineer building impactful web applications." />
+  <link rel="icon" href="img/favicon.ico" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- jQuery & Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/customScript.js"></script>
 </head>
+
 <body class="divMain">
-    <a href="#mainContent" class="skip-link">Skip to main content</a>
-    <header role="banner">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary" role="navigation">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="img/dtd-logo.png" alt="Devon's Logo" style="height: 50px; width: auto; margin-right: 10px;"> Devon, The Developer</a>
-                <button class="navbar-toggler dropdown-toggle" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Project Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="consultation.html">Consultation</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>     
-    <main class="container my-5" id="mainContent" role="main">
-        <div class="row align-items-center">
-            <div class="card col-md-6 ">
-                <div class="card-header">
-                    <h1>Welcome to my Portfolio</h1>
-                </div>
-                <div class="card-body">
-                    <p>Hello, I'm Devon! I'm a full-stack developer with a passion for creating impactful web applications, helping businesses grow, and sharing my experience to teach high-value software trade skills, making technology accessible to everyone. Explore my work or book a consultation to discuss potential collaborations.</p>
-                    <a href="projects.html" class="btn btn-primary mt">View Project Blog</a>
-                    <a href="consultation.html" class="btn btn-secondary">Book a Consultation</a>
-                </div>
-            </div>
-            <div class="col-md-6 pt-5">
-                <div id="galleryCarousel" class="carousel slide" data-ride="carousel" aria-label="Gallery">
-                    <ul class="carousel-indicators">
-                        <li data-target="#galleryCarousel" data-slide-to="0" class="active" aria-label="Slide 1"></li>
-                        <li data-target="#galleryCarousel" data-slide-to="1" aria-label="Slide 2"></li>
-                        <li data-target="#galleryCarousel" data-slide-to="2" aria-label="Slide 3"></li>
-                        <li data-target="#galleryCarousel" data-slide-to="3" aria-label="Slide 4"></li>
-                    </ul>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-interval="3000">
-                            <img src="img/DSC_headshot.jpg" class="d-block w-100" alt="Gallery Image 1">
-                        </div>
-                        <div class="carousel-item" data-interval="3000">
-                            <img src="img/bit-CP.jpg" class="d-block w-100" alt="Gallery Image 2">
-                        </div>
-                        <div class="carousel-item" data-interval="3000">
-                            <img src="img/candid.jpg" class="d-block w-100" alt="Gallery Image 3">
-                        </div>
-                        <div class="carousel-item" data-interval="3000">
-                            <img src="img/catoSnippet.jpg" class="d-block w-100" alt="Gallery Image 4">
+  <!-- <a href="#mainContent" class="skip-link">Skip to main content</a> -->
+
+  <!-- Header & Navigation -->
+<header role="banner" style="">
+    <nav class="navbar navbar-expand-custom navbar-mainbg sticky-top">
+        <a class="navbar-brand navbar-logo" href="index.html"><img src="img/dtd-logo.png" alt="Devon's Logo" style="height: 50px; width: auto; margin-right: 10px;"> Devon, The Developer</a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Address Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Components</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Calendar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Charts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+  </header>
+
+  
+  <!-- Main Content -->
+  <main class="container my-5" id="mainContent" role="main">
+              <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="flip-card mx-auto">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="\img\aiHeadshot.JPG" alt="Team Member" class="profile-img">
+                                    <h3>Devón Barrett</h3>
+                                    <p>Web Developer</p>
+                                    <p class="mt-3">
+                                        <span class="waving-hand">👋</span> Hover to know more!
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>About Me</h3><br>
+                                    <p>I'm passionate about for creating impactful web applications. Explore my work or book a consultation to discuss potential collaborations.</p>
+                                    <div class="social-icons mt-4">
+                                        <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+                                        <!-- <a href="#"><i class="fab fa-linkedin"></i></a> -->
+                                        <!-- <a href="#"><i class="fab fa-github"></i></a> -->
+                                        <a href="projects.html" class="btn btn-primary mt">View Project Blog</a>
+                                        <a href="consultation.html" class="btn btn-secondary">Book a Consultation</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#galleryCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#galleryCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
             </div>
+            
+
+    
+ 
+
+      <!-- Carousel -->
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 footer-section">
+          <div class="footer-logo">Devon, The Developer</div>
+          <p class="footer-about">
+            Dedicated to building quality software and empowering others through technology and education.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
-    </main>
-    <footer class="text-center py-4" role="contentinfo">
-        <p>&copy; 2024 Devon, The Developer. All rights reserved.</p>
-    </footer>
+        <div class="col-lg-2 col-md-6 footer-section">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="consultation.html">Consultation</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-section">
+          <h5>Support</h5>
+          <ul class="footer-links">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 footer-section">
+          <h5>Newsletter</h5>
+          <p class="footer-about">Subscribe to get updates on my work, articles, and exclusive tech tips.</p>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Enter your email" />
+            <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+        <p>© 2024 Devon, The Developer. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
