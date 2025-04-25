@@ -14,9 +14,14 @@
     font-family: 'Arial', sans-serif;
 }
 
-/*----------bootstrap-navbar-css------------*/
+.cookie-alert {
+    color: yellow;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    font-size: 13px;
+}
+
 .navbar-logo{
-	padding: 15px;
+	padding: 9px;
 	color: #fff;
 }
 .navbar-mainbg{
