@@ -17,8 +17,18 @@
 .cookie-alert {
     color: yellow;
     background: linear-gradient(45deg, #3498db, #2ecc71);
-    font-size: 13px;
+	font-size: 0.9rem;
+      line-height: 1.5;
+      border: 1px solid rgba(0, 0, 0, 0.397);
 }
+
+.cookie-alert strong {
+      font-weight: normal;
+    }
+
+    .swal2-container {
+    background-color: transparent !important;
+  }
 
 .navbar-logo{
 	padding: 9px;
