@@ -166,49 +166,45 @@
   <!-- Cookie Banner -->
   <script>
     document.addEventListener("DOMContentLoaded", function(){
-      // if(!localStorage.getItem("cookieConsentGiven")){
-            Swal.fire({
-                text: "This website uses cookies to ensure you get the best experience on our website and analyze site traffic.",
-            position: "bottom",
-            animation: true,
-            //icon: 'info',
-            showConfirmButton: true,
-            confirmButtonColor: "blue",
-            confirmButtonText: "Okay, thanks!",
-            //showCancelButton: true,
-            //cancelButtonText: "Learn More",
-            width: "100%",
-            padding: "0%",
-            // allowOutsideClick: false,
-            // allowEscapeKey: false,
-            backdrop: false,
-            showClass: {
-              popup: `
-                animate__delay-1s
-                animate__animated 
-                animate__fadeInLeft 
-                animate__faster
-                animate__pulse
-              `
-            },
-            hideClass: {
-              popup: `
-                animate__animated 
-                animate__fadeOutRight 
-                animate__faster
-              `
-            },
-            customClass: {
-                popup: 'cookie-alert'
+      if(!sessionStorage.getItem("cookieConsentGiven")){
+        Swal.fire({
+          html: `This website uses cookies to ensure you get the best experience on our website and analyze site traffic.`,
+          position: "bottom",
+          animation: true,
+          showConfirmButton: true,
+          allowOutsideClick: () => true,
+          confirmButtonColor: "blue",
+          confirmButtonText: "Okay, thanks!",
+          width: "100%",
+          padding: "0%",
+          backdrop: true,
+          showClass: {
+            popup: `
+              animate__delay-1s
+              animate__animated 
+              animate__fadeInLeft 
+              animate__faster
+              animate__pulse
+            `
+          },
+          hideClass: {
+            popup: `
+              animate__animated 
+              animate__fadeOutRight 
+              animate__faster
+            `
+          },
+          customClass: {
+              popup: 'cookie-alert'
+          }
+        }).then(result => {
+            if (result.isConfirmed) {
+                sessionStorage.setItem("cookieConsentGiven", "true");
+            } else if (result.dismiss === Swal.DismissReason.backdrop) {
+              sessionStorage.setItem("cookieConsentGiven", "false");
             }
-            }).then(result => {
-                if (result.isConfirmed) {
-                    localStorage.setItem("cookieConsentGiven", "true");
-                } else if (result.dismiss === Swal.DismissReason.cancel) {
-                    window.open("/cookie-policy.html", "_blank");
-                }
-            })
-        // }
+        })
+      }
     })
 </script>
 </body>
