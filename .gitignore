@@ -1,0 +1,7 @@
+/.vscode
+
+# Ignore common junk files inside all folders
+**/.DS_Store
+**/*.log
+**/*.tmp
+**/Thumbs.db
