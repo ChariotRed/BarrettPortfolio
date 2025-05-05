@@ -168,7 +168,9 @@
     document.addEventListener("DOMContentLoaded", function(){
       if(!sessionStorage.getItem("cookieConsentGiven")){
         Swal.fire({
-          html: `This website uses cookies to ensure you get the best experience on our website and analyze site traffic.`,
+          html: `<p>&#128075; <strong>Welcome! Knowledge grows when we share it.</strong></p>
+
+<p>This portfolio brings together the projects, insights, and lessons I’ve gained along my journey as a developer. It’s a place for collaboration, curiosity, and continuous learning, where developers from all backgrounds are encouraged to explore and connect. A simple “thank you” or a thoughtful conversation can go a long way. Feel free to reach out, share feedback, or start a dialogue. I believe that <strong>sharing knowledge strengthens our paths forward and builds better communities</strong>. If something here sparks an idea or adds value to your work, I’d love to hear about it.</p>`,
           position: "bottom",
           animation: true,
           showConfirmButton: true,
