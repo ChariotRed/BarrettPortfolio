@@ -15,7 +15,7 @@
 }
 
 .cookie-alert {
-    color: yellow;
+    color: rgb(255, 255, 255);
     background: linear-gradient(45deg, #3498db, #2ecc71);
 	font-size: 0.9rem;
       line-height: 1.5;
